@@ -22,7 +22,7 @@ components:
                 servicePort: 80
     -
         kind: Application
-        name: stg
+        name: main
         gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
         gitBranch: stg
         gitApplicationPath: pygames
@@ -39,7 +39,7 @@ components:
                 servicePort: 80
     -
         kind: Application
-        name: dev
+        name: main
         gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
         gitBranch: dev
         gitApplicationPath: pygames
