@@ -1,7 +1,7 @@
 kind: Environment
 name: Pygames_on_web
 type: primary
-urlHandle: sandyinspires
+urlHandle: alindtest
 components:
     -
         kind: Application
@@ -18,39 +18,5 @@ components:
         hosts:
             -
                 hostname: 'prod-pygame-{{ env.base_domain }}'
-                path: /
-                servicePort: 80
-    -
-        kind: Application
-        name: main
-        gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
-        gitBranch: stg
-        gitApplicationPath: pygames
-        dockerCompose:
-            build:
-                context: ./pygames
-                dockerfile: .docker/Dockerfile
-            ports:
-                - '80:80'
-        hosts:
-            -
-                hostname: 'alind-pygame-{{ env.base_domain }}'
-                path: /
-                servicePort: 80
-    -
-        kind: Application
-        name: main
-        gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
-        gitBranch: dev
-        gitApplicationPath: pygames
-        dockerCompose:
-            build:
-                context: ./pygames
-                dockerfile: .docker/Dockerfile
-            ports:
-                - '80:80'
-        hosts:
-            -
-                hostname: 'alind-pygame-{{ env.base_domain }}'
                 path: /
                 servicePort: 80
