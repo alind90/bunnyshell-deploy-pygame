@@ -6,7 +6,7 @@ components:
     -
         kind: Application
         name: prod
-        gitRepo: 'https://github.com/Santhoshkumard11/bunnyshell-deploy-pygame.git'
+        gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
         gitBranch: main
         gitApplicationPath: pygames
         dockerCompose:
@@ -23,7 +23,7 @@ components:
     -
         kind: Application
         name: stg
-        gitRepo: 'https://github.com/Santhoshkumard11/bunnyshell-deploy-pygame.git'
+        gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
         gitBranch: stg
         gitApplicationPath: pygames
         dockerCompose:
@@ -34,13 +34,13 @@ components:
                 - '80:80'
         hosts:
             -
-                hostname: 'stg-pygame-{{ env.base_domain }}'
+                hostname: 'alind-pygame-{{ env.base_domain }}'
                 path: /
                 servicePort: 80
     -
         kind: Application
         name: dev
-        gitRepo: 'https://github.com/Santhoshkumard11/bunnyshell-deploy-pygame.git'
+        gitRepo: 'https://github.com/alind90/bunnyshell-deploy-pygame.git'
         gitBranch: dev
         gitApplicationPath: pygames
         dockerCompose:
@@ -51,6 +51,6 @@ components:
                 - '80:80'
         hosts:
             -
-                hostname: 'dev-pygame-{{ env.base_domain }}'
+                hostname: 'alind-pygame-{{ env.base_domain }}'
                 path: /
                 servicePort: 80
